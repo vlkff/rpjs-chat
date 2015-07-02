@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rapid Prototyping with JS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript"
+            src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="http://www.parsecdn.com/js/parse-1.4.2.min.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+
+    <link type="text/css" rel="stylesheet"
+          href="bootstrap/css/bootstrap.min.css"/>
+
+    <!-- Include Less Styles and JS compiler !-->
+    <!-- .less files must be included before less.js !-->
+    <link rel="stylesheet/less" type="text/css" href="app/less/styles.less"/>
+    <script>
+        less = {
+            env: "development",
+            async: false,
+            fileAsync: false,
+            poll: 1000,
+            functions: {},
+            dumpLineNumbers: "comments",
+            relativeUrls: false,
+            rootpath: ":/parse.dev/"
+        };
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.0/less.min.js"></script>
+    <!-- END Include Less Styles and JS compiler !-->
+</head>
+<body>
+<div class="container-fluid content-head">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1>Rapid Prototyping with JS: Chat App with parse.com</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 content-main">
+            <div class="row">
+                <div class="col-xs-8">
+                    <div class="row messages-head">
+                        <div class="col-xs-2">Name</div>
+                        <div class="col-xs-6">Message</div>
+                    </div>
+                    <div id="messages" class="messages">
+                        No messages
+                    </div>
+                </div>
+                <div id="new-message-wrapper" class="col-xs-4 new-message">
+                    <form id="new-message-form">
+                        <input class="form-control" type="text" name="username" placeholder="Name">
+                        <textarea class="form-control" name="message" placeholder="Message"></textarea>
+                        <a id="send-message" class="btn btn-primary form-control">Send</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
