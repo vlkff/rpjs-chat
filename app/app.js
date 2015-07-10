@@ -15,8 +15,8 @@ var parseJavaScriptKey = 'PbFfn9EAgGmFkp9DUGX7f6HPHhTztouaqYjblbAG';
 var parseRESTKey = '4gEHsNc7clOCanAdpO7EDDKvbZJeQqU6Ehym6qjt';
 
 function clickSendMessage() {
-  var username = $('#new-message input[name=username]').val();
-  var message = $('#new-message textarea[name=message]').val();
+  var username = $('#new-message-form input[name=username]').val();
+  var message = $('#new-message-form textarea[name=message]').val();
 
   if (!username.length || !message.length) {
     return;
